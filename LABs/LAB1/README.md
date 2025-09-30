@@ -56,7 +56,7 @@ pip install numpy pandas scikit-learn matplotlib
   + $R^2$，相关系数，越接近1越好，若为负数，说明你的模型与实际趋势相反
 + 逻辑回归
   + $F1$，越接近1越好
-  + $AUC$，$ROC$ 曲线的面积，越接近1越好
+  + $AUC$，ROC曲线的面积，越接近1越好
 
 具体评分公式待定~
 
@@ -69,5 +69,6 @@ pip install numpy pandas scikit-learn matplotlib
 + report.pdf
 
 以`<学号>-<姓名>-LAB1.zip`格式提交到BB系统
+
 
 
