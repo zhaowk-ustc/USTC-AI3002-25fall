@@ -7,11 +7,15 @@ class DataSet:
         Dataset class.
         
         Args:
-            - features (pd.Dataframe): the input features
+            - features (pd.Dataframe | np.ndarray): the input features
             - targets (pd.DataFrame | np.ndarray): the targets (Optional)
             - binary_classification (bool): Whether we are consider it as a classification task
         """
-        self.features = features.values
+        if isinstance(features, pd.DataFrame):
+            self.features = features.values
+        else:
+            self.features = features
+
         if isinstance(targets, pd.DataFrame):
             self.targets = targets.values
         else:
@@ -71,6 +75,11 @@ class DataLoader:
         self.current_idx = end
         
         batch_x, batch_y = self.dataset[batch_indices]
+        if hasattr(batch_x, 'values'):
+           batch_x = batch_x.values
+        if batch_y is not None and hasattr(batch_y, 'values'):
+            batch_y = batch_y.values
+            
         return batch_x, batch_y
     
     def __len__(self):
