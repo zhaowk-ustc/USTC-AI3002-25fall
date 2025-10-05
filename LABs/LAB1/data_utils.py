@@ -7,7 +7,7 @@ class DataSet:
         Dataset class.
         
         Args:
-            - features (pd.Dataframe | np.ndarray): the input features
+            - features (pd.DataFrame | np.ndarray): the input features
             - targets (pd.DataFrame | np.ndarray): the targets (Optional)
             - binary_classification (bool): Whether we are consider it as a classification task
         """
@@ -84,3 +84,4 @@ class DataLoader:
     
     def __len__(self):
         return (len(self.dataset) + self.batch_size - 1) // self.batch_size
+
