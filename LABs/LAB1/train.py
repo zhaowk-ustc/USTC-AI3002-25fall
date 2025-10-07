@@ -71,11 +71,11 @@ def evaluate_classification(trainer: LinearRegressionTrainer):
         total_pred.append(preds)
         
     total_pred = np.concatenate(total_pred, axis=0)
-    total_pred = (total_pred > 0.5).astype(int)
     total_grd = np.concatenate(total_grd, axis=0)
-
-    f1 = f1_score(total_grd, total_pred)
     auc = roc_auc_score(total_grd, total_pred)
+
+    total_pred = (total_pred > 0.5).astype(int)
+    f1 = f1_score(total_grd, total_pred)
 
     print(f"Evaluation results on your eval set: F1: {f1:.2f}, AUC: {auc:.2f}")
     return f1, auc
@@ -129,4 +129,5 @@ def main():
         evaluate_classification(trainer)
 
 if __name__ == "__main__":
+
     main()
