@@ -26,6 +26,7 @@
 
 ```bash
 conda create -n ai25 python=3.10
+conda activate ai25
 ```
 
 **安装必须的库**
@@ -69,6 +70,7 @@ pip install numpy pandas scikit-learn matplotlib
 + report.pdf
 
 以`<学号>-<姓名>-LAB1.zip`格式提交到BB系统
+
 
 
 
