@@ -210,3 +210,6 @@ latex/
 
 *.DS_Store
 *.zip
+
+output/
+outputs/

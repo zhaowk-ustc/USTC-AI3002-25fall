@@ -86,7 +86,7 @@ PYTHON_BIN = sys.executable  # 默认使用当前解释器；若提供 --conda-e
 TRAIN_SCRIPT = "train.py"     # 训练脚本名
 
 # 输出目录
-OUT_DIR = Path("sweep_outputs")
+OUT_DIR = Path("outputs/sweep_outputs")
 FIG_DIR = OUT_DIR / "figures"
 OUT_DIR.mkdir(exist_ok=True, parents=True)
 FIG_DIR.mkdir(exist_ok=True, parents=True)
